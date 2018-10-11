@@ -44,6 +44,8 @@ object Libs {
   val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
 
+  val rxredux = "com.freeletics.rxredux:rxredux:1.0.1"
+
   val junit = "junit:junit:4.12"
   val truth = "com.google.truth:truth:0.39"
   val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
