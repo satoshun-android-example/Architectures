@@ -3,12 +3,12 @@ object Vers {
   val min_sdk = 24
   val target_sdk = 28
 
-  val kotlin = "1.2.71"
-  val couroutine = "0.26.1"
+  val kotlin = "1.3.0-rc-57"
+  val couroutine = "0.30.0-eap13"
 }
 
 object Libs {
-  val android_plugin = "com.android.tools.build:gradle:3.2.0"
+  val android_plugin = "com.android.tools.build:gradle:3.2.1"
   val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 

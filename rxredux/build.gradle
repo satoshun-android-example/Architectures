@@ -26,5 +26,8 @@ dependencies {
   implementation Libs.appcompat
   implementation Libs.constraintlayout
 
+  implementation Libs.coroutine
+  implementation Libs.ui_coroutine
+
   testImplementation Libs.junit
 }

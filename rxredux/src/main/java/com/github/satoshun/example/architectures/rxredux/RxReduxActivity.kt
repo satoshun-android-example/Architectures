@@ -1,13 +1,28 @@
 package com.github.satoshun.example.architectures.rxredux
 
+import android.annotation.SuppressLint
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import kotlinx.android.synthetic.main.main_act.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.android.Main
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
 
-class RxReduxActivity : AppCompatActivity() {
+class RxReduxActivity : AppCompatActivity(),
+    CoroutineScope {
+
+  private val job = Job()
+  override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
 
   private lateinit var viewModel: RxReduxViewModel
 
+  @SuppressLint("SetTextI18n")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
@@ -16,11 +31,29 @@ class RxReduxActivity : AppCompatActivity() {
 
     viewModel.state.observe(this, Observer {
       // render
-      when (it!!) {
-
+      when (
+        val state = it) {
+        PaginationStateMachine.State.LoadingFirstPageState -> root.addView(TextView(this@RxReduxActivity).apply {
+          text = "first"
+        })
+        is PaginationStateMachine.State.ShowContentAndLoadNextPageState -> root.addView(TextView(this@RxReduxActivity).apply {
+          text = state.text
+        })
       }
     })
 
-    viewModel.input.onNext(RxReduxAction.LoadFirstPageAction)
+    launch {
+      while (true) {
+        delay(2000)
+        viewModel.loadMoreItem()
+      }
+    }
+
+    viewModel.preparedActivity()
+  }
+
+  override fun onDestroy() {
+    super.onDestroy()
+    job.cancel()
   }
 }
