@@ -3,26 +3,26 @@ package com.github.satoshun.example.architectures.domic
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
-import kotlinx.coroutines.android.Main
-import kotlin.coroutines.CoroutineContext
+import com.lyft.domic.android.rendering.AndroidRenderer
+import io.reactivex.disposables.CompositeDisposable
+import io.reactivex.rxkotlin.plusAssign
 
-class DomicActivity : AppCompatActivity(),
-    CoroutineScope {
+class DomicActivity : AppCompatActivity() {
 
-  private val job = Job()
-  override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
+  private val renderer = AndroidRenderer()
+  private val disposables = CompositeDisposable()
 
   @SuppressLint("SetTextI18n")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
+
+    val view = DomicMainView(findViewById(android.R.id.content), renderer)
+    disposables += DomicMainPresenter(view)
   }
 
   override fun onDestroy() {
     super.onDestroy()
-    job.cancel()
+    disposables.dispose()
   }
 }

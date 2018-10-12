@@ -1,6 +1,6 @@
 object Vers {
   val compile_sdk = 28
-  val min_sdk = 24
+  val min_sdk = 26
   val target_sdk = 28
 
   val kotlin = "1.3.0-rc-57"
@@ -43,6 +43,8 @@ object Libs {
 
   val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
+  val rxkotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
+  val rxbinding = "com.jakewharton.rxbinding2:rxbinding:2.2.0"
 
   val rxredux = "com.freeletics.rxredux:rxredux:1.0.1"
   val domic = "com.freeletics.rxredux:rxredux:1.0.1"

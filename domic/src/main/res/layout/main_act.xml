@@ -9,5 +9,13 @@
     android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical" />
+    android:orientation="vertical">
+
+    <Button
+      android:id="@+id/submit"
+      android:layout_width="match_parent"
+      android:layout_height="80dp"
+      android:layout_gravity="center"
+      android:text="SUBMIT" />
+  </LinearLayout>
 </ScrollView>
