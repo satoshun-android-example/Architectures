@@ -1,0 +1,33 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+  compileSdkVersion Vers.compile_sdk
+  defaultConfig {
+    applicationId "com.github.satoshun.example.architectures.domic"
+    minSdkVersion Vers.min_sdk
+    targetSdkVersion Vers.target_sdk
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation Libs.rxredux
+
+  implementation Libs.kotlin
+  implementation Libs.appcompat
+  implementation Libs.constraintlayout
+
+  implementation Libs.coroutine
+  implementation Libs.ui_coroutine
+
+  testImplementation Libs.junit
+}

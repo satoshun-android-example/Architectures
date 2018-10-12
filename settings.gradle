@@ -1,1 +1,3 @@
 include ':rxredux'
+include ':domic'
+include ':libs:domic:domic:android'
