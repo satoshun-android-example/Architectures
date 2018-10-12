@@ -20,7 +20,7 @@ android {
 }
 
 dependencies {
-  implementation Libs.rxredux
+  implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
 
   implementation Libs.kotlin
   implementation Libs.appcompat

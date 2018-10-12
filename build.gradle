@@ -5,6 +5,9 @@ buildscript {
     google()
     jcenter()
     maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
+    flatDir {
+      dirs 'libs'
+    }
   }
   dependencies {
     classpath Libs.android_plugin
