@@ -47,7 +47,7 @@ object Libs {
   val rxbinding = "com.jakewharton.rxbinding2:rxbinding:2.2.0"
 
   val rxredux = "com.freeletics.rxredux:rxredux:1.0.1"
-  val domic = "com.freeletics.rxredux:rxredux:1.0.1"
+  val mvrx = "com.airbnb.android:mvrx:0.5.0"
 
   val junit = "junit:junit:4.12"
   val truth = "com.google.truth:truth:0.39"
