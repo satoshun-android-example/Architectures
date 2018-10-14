@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+  compileSdkVersion Vers.compile_sdk
+  defaultConfig {
+    applicationId "com.github.satoshun.example.architectures.mobius"
+    minSdkVersion Vers.min_sdk
+    targetSdkVersion Vers.target_sdk
+    versionCode 1
+    versionName "1.0"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation Libs.mobius
+  implementation Libs.mobius_rx2
+  implementation Libs.mobius_android
+
+  implementation Libs.kotlin
+  implementation Libs.appcompat
+  implementation Libs.constraintlayout
+
+  implementation Libs.viewmodel
+
+  implementation Libs.coroutine
+  implementation Libs.ui_coroutine
+
+  testImplementation Libs.junit
+}
