@@ -1,7 +1,9 @@
 package com.github.satoshun.example.architectures.rib
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.FrameLayout
 import com.uber.rib.core.InteractorBaseComponent
 import com.uber.rib.core.ViewBuilder
 import dagger.Binds
@@ -10,9 +12,7 @@ import dagger.Provides
 
 class RootBuilder(
   dependency: ParentComponent
-) : ViewBuilder<RootView, RootRouter, RootBuilder.ParentComponent>(
-    dependency
-) {
+) : ViewBuilder<RootView, RootRouter, RootBuilder.ParentComponent>(dependency) {
   @dagger.Component(
       modules = [Module::class],
       dependencies = [ParentComponent::class]
@@ -41,11 +41,22 @@ class RootBuilder(
   fun build(parentView: ViewGroup): RootRouter {
     val rootView = createView(parentView)
     val interactor = RootInteractor()
-    TODO()
+    return DaggerRootBuilder_Component.builder()
+        .parentComponent(dependency)
+        .view(rootView)
+        .interactor(interactor)
+        .build()
+        .rootRouter()
   }
 
   override fun inflateView(inflater: LayoutInflater, parentViewGroup: ViewGroup): RootView {
-    return RootView(parentViewGroup.context)
+    return RootView(parentViewGroup.context).apply {
+      layoutParams = FrameLayout.LayoutParams(
+          FrameLayout.LayoutParams.MATCH_PARENT,
+          FrameLayout.LayoutParams.MATCH_PARENT
+      )
+      setBackgroundColor(Color.GREEN)
+    }
   }
 
   @dagger.Module
