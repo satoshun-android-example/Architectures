@@ -14,3 +14,6 @@
 
 [Ribs](https://github.com/uber/RIBs)
 - todo
+
+[MVICore](https://github.com/badoo/MVICore)
+- todo

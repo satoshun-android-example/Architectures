@@ -52,6 +52,8 @@ object Libs {
   const val mobius_rx2 = "com.spotify.mobius:mobius-rx2:1.2.0"
   const val mobius_android = "com.spotify.mobius:mobius-android:1.2.0"
   const val rib = "com.uber.rib:rib-android:0.9.1"
+  const val mvicore = "com.github.badoo.mvicore:mvicore:1.1.2"
+  const val mvicore_android = "com.github.badoo.mvicore:mvicore-android:1.1.2"
 
   const val dagger = "com.google.dagger:dagger:2.17"
   const val dagger_compiler = "com.google.dagger:dagger-compiler:2.17"
