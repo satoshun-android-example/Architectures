@@ -51,6 +51,7 @@ object Libs {
   const val mobius = "com.spotify.mobius:mobius-core:1.2.0"
   const val mobius_rx2 = "com.spotify.mobius:mobius-rx2:1.2.0"
   const val mobius_android = "com.spotify.mobius:mobius-android:1.2.0"
+  const val rib = "com.uber.rib:rib-android:0.9.1"
 
   const val junit = "junit:junit:4.12"
   const val truth = "com.google.truth:truth:0.39"
