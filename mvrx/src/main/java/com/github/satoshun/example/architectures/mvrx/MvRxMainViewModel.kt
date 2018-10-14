@@ -24,5 +24,6 @@ class MvRxMainViewModel : BaseMvRxViewModel<MainState>(
         .execute {
           copy(name = it().toString())
         }
+        .disposeOnClear()
   }
 }
