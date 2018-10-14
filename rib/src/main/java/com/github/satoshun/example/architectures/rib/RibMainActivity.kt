@@ -1,22 +1,23 @@
 package com.github.satoshun.example.architectures.rib
 
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import android.view.ViewGroup
+import com.uber.rib.core.RibActivity
+import com.uber.rib.core.ViewRouter
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.android.Main
 import kotlin.coroutines.CoroutineContext
 
-class RibActivity : AppCompatActivity(),
+class RibMainActivity : RibActivity(),
     CoroutineScope {
 
   private val job = Job()
   override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
 
-  override fun onCreate(savedInstanceState: Bundle?) {
-    super.onCreate(savedInstanceState)
-    setContentView(R.layout.main_act)
+  override fun createRouter(parentViewGroup: ViewGroup): ViewRouter<*, *, *> {
+    val builder = RootBuilder(object : RootBuilder.ParentComponent {})
+    return builder.build(parentViewGroup)
   }
 
   override fun onDestroy() {

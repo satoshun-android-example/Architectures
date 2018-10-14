@@ -53,6 +53,9 @@ object Libs {
   const val mobius_android = "com.spotify.mobius:mobius-android:1.2.0"
   const val rib = "com.uber.rib:rib-android:0.9.1"
 
+  const val dagger = "com.google.dagger:dagger:2.17"
+  const val dagger_compiler = "com.google.dagger:dagger-compiler:2.17"
+
   const val junit = "junit:junit:4.12"
   const val truth = "com.google.truth:truth:0.39"
   const val mockito_kotlin = "com.nhaarman:mockito-kotlin-kt1.1:1.5.0"
