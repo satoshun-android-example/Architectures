@@ -1,24 +1,31 @@
 package com.github.satoshun.example.architectures.mvrx
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
+import com.airbnb.mvrx.BaseMvRxActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.android.Main
 import kotlin.coroutines.CoroutineContext
 
-class MvRxActivity : AppCompatActivity(),
+class MvRxActivity : BaseMvRxActivity(),
     CoroutineScope {
 
   private val job = Job()
   override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
 
-  @SuppressLint("SetTextI18n")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
+
+    if (savedInstanceState == null) {
+      val manager = supportFragmentManager
+      val fragment = MvRxMainFragment()
+      manager
+          .beginTransaction()
+          .add(fragment, "temp")
+          .commitNow()
+    }
   }
 
   override fun onDestroy() {
