@@ -5,7 +5,6 @@ import com.airbnb.mvrx.BaseMvRxActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.android.Main
 import kotlin.coroutines.CoroutineContext
 
 class MvRxActivity : BaseMvRxActivity(),

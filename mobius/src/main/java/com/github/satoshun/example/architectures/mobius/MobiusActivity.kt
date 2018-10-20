@@ -16,7 +16,6 @@ import io.reactivex.ObservableTransformer
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.android.Main
 import kotlin.coroutines.CoroutineContext
 
 class MobiusActivity : AppCompatActivity(),

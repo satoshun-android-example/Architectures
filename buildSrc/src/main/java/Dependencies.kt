@@ -3,8 +3,8 @@ object Vers {
   const val min_sdk = 26
   const val target_sdk = 28
 
-  const val kotlin = "1.3.0-rc-57"
-  const val coroutine = "0.30.0-eap13"
+  const val kotlin = "1.3.0-rc-190"
+  const val coroutine = "1.0.0-RC1"
 }
 
 object Libs {
@@ -55,8 +55,8 @@ object Libs {
   const val mvicore = "com.github.badoo.mvicore:mvicore:1.1.2"
   const val mvicore_android = "com.github.badoo.mvicore:mvicore-android:1.1.2"
 
-  const val dagger = "com.google.dagger:dagger:2.17"
-  const val dagger_compiler = "com.google.dagger:dagger-compiler:2.17"
+  const val dagger = "com.google.dagger:dagger:2.18"
+  const val dagger_compiler = "com.google.dagger:dagger-compiler:2.18"
 
   const val junit = "junit:junit:4.12"
   const val truth = "com.google.truth:truth:0.39"
