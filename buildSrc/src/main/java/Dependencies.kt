@@ -3,8 +3,8 @@ object Vers {
   const val min_sdk = 26
   const val target_sdk = 28
 
-  const val kotlin = "1.3.0-rc-190"
-  const val coroutine = "1.0.0-RC1"
+  const val kotlin = "1.3.0"
+  const val coroutine = "1.0.0"
 }
 
 object Libs {
@@ -25,7 +25,7 @@ object Libs {
 
   const val material = "com.google.android.material:material:1.0.0"
   const val coordinatorlayout = "androidx.coordinatorlayout:coordinatorlayout:1.0.0"
-  const val paging = "androidx.paging:paging-runtime:2.0.0-rc01"
+  const val paging = "androidx.paging:paging-runtime:2.0.0"
   const val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0"
   const val navigation_ui = "android.arch.navigation:navigation-ui-ktx:1.0.0"
 
@@ -36,10 +36,6 @@ object Libs {
   const val emoji = "androidx.emoji:emoji:1.0.0"
   const val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   const val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
-
-  const val coroutine_binding = "com.github.satoshun.coroutinebinding:coroutinebinding:0.1.1"
-
-  const val multidex = "com.android.support:multidex:1.0.3"
 
   const val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   const val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
