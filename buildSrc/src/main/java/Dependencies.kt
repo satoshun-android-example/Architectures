@@ -8,7 +8,7 @@ object Vers {
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.2.1"
+  const val android_plugin = "com.android.tools.build:gradle:3.3.0-rc01"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
@@ -29,7 +29,9 @@ object Libs {
   const val navigation = "android.arch.navigation:navigation-fragment-ktx:1.0.0"
   const val navigation_ui = "android.arch.navigation:navigation-ui-ktx:1.0.0"
 
+  const val lifecyle_extension = "androidx.lifecycle:lifecycle-extensions:2.0.0"
   const val viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:2.0.0"
+
   const val livedata = "androidx.lifecycle:lifecycle-livedata:2.0.0"
   const val lifecycle_compiler = "androidx.lifecycle:lifecycle-compiler:2.0.0"
 
@@ -37,7 +39,7 @@ object Libs {
   const val emoji_compat = "androidx.emoji:emoji-appcompat:1.0.0"
   const val emoji_bundled = "androidx.emoji:emoji-bundled:1.0.0"
 
-  const val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
+  const val rxjava = "io.reactivex.rxjava2:rxjava:2.2.4"
   const val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
   const val rxkotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
   const val rxbinding = "com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1"

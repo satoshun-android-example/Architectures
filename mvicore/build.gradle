@@ -31,6 +31,9 @@ dependencies {
   implementation Libs.appcompat
   implementation Libs.constraintlayout
 
+  implementation Libs.rxjava
+  implementation Libs.rxandroid
+
   implementation Libs.viewmodel
 
   implementation Libs.coroutine

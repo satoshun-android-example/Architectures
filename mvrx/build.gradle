@@ -26,6 +26,7 @@ dependencies {
   implementation Libs.appcompat
   implementation Libs.constraintlayout
 
+  implementation Libs.lifecyle_extension
   implementation Libs.viewmodel
 
   implementation Libs.coroutine
