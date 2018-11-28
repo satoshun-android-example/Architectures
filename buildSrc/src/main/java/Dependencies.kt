@@ -45,13 +45,20 @@ object Libs {
   const val rxbinding = "com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1"
 
   const val rxredux = "com.freeletics.rxredux:rxredux:1.0.1"
+
   const val mvrx = "com.airbnb.android:mvrx:0.5.0"
+
   const val mobius = "com.spotify.mobius:mobius-core:1.2.0"
   const val mobius_rx2 = "com.spotify.mobius:mobius-rx2:1.2.0"
   const val mobius_android = "com.spotify.mobius:mobius-android:1.2.0"
+
   const val rib = "com.uber.rib:rib-android:0.9.1"
+
   const val mvicore = "com.github.badoo.mvicore:mvicore:1.1.2"
   const val mvicore_android = "com.github.badoo.mvicore:mvicore-android:1.1.2"
+
+  const val mosby_mvp = "com.hannesdorfmann.mosby3:viewstate:3.1.0"
+  const val mosby_mvi = "com.hannesdorfmann.mosby3:mvi:3.1.0"
 
   const val dagger = "com.google.dagger:dagger:2.18"
   const val dagger_compiler = "com.google.dagger:dagger-compiler:2.18"
