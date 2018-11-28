@@ -26,6 +26,8 @@ dependencies {
   implementation Libs.appcompat
   implementation Libs.constraintlayout
 
+  implementation Libs.rxjava
+
   implementation Libs.coroutine
   implementation Libs.ui_coroutine
 

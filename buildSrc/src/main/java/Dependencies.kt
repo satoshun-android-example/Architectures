@@ -3,7 +3,7 @@ object Vers {
   const val min_sdk = 26
   const val target_sdk = 28
 
-  const val kotlin = "1.3.0"
+  const val kotlin = "1.3.10"
   const val coroutine = "1.0.0"
 }
 
@@ -40,7 +40,7 @@ object Libs {
   const val rxjava = "io.reactivex.rxjava2:rxjava:2.2.0"
   const val rxandroid = "io.reactivex.rxjava2:rxandroid:2.1.0"
   const val rxkotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
-  const val rxbinding = "com.jakewharton.rxbinding2:rxbinding:2.2.0"
+  const val rxbinding = "com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1"
 
   const val rxredux = "com.freeletics.rxredux:rxredux:1.0.1"
   const val mvrx = "com.airbnb.android:mvrx:0.5.0"
