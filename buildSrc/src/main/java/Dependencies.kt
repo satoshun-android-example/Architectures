@@ -18,8 +18,8 @@ object Libs {
 
   const val ktx = "androidx.core:core-ktx:1.0.0"
 
-  const val activity_ktx = "androidx.activity:activity-ktx:1.0.0-alpha01"
-  const val fragment_ktx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
+  const val activityx = "androidx.activity:activity-ktx:1.0.0-alpha01"
+  const val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
 
   const val appcompat = "androidx.appcompat:appcompat:1.0.2"
   const val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"

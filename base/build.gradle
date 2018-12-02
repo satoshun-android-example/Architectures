@@ -1,0 +1,23 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+  compileSdkVersion Vers.compile_sdk
+  defaultConfig {
+    minSdkVersion Vers.min_sdk
+  }
+}
+
+dependencies {
+  api Libs.kotlin
+
+  api Libs.appcompat
+  api Libs.constraintlayout
+
+  api Libs.activityx
+  api Libs.fragmentx
+  api Libs.ktx
+
+  api Libs.coroutine
+  api Libs.ui_coroutine
+}
