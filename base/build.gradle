@@ -18,6 +18,9 @@ dependencies {
   api Libs.fragmentx
   api Libs.ktx
 
+  api Libs.viewmodel
+  api Libs.lifecyle_extension
+
   api Libs.coroutine
   api Libs.ui_coroutine
 }

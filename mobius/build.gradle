@@ -20,18 +20,11 @@ android {
 }
 
 dependencies {
+  implementation project(':base')
+
   implementation Libs.mobius
   implementation Libs.mobius_rx2
   implementation Libs.mobius_android
-
-  implementation Libs.kotlin
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
-
-  implementation Libs.viewmodel
-
-  implementation Libs.coroutine
-  implementation Libs.ui_coroutine
 
   testImplementation Libs.junit
 }

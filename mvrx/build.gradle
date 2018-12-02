@@ -20,17 +20,9 @@ android {
 }
 
 dependencies {
+  implementation project(':base')
+
   implementation Libs.mvrx
-
-  implementation Libs.kotlin
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
-
-  implementation Libs.lifecyle_extension
-  implementation Libs.viewmodel
-
-  implementation Libs.coroutine
-  implementation Libs.ui_coroutine
 
   testImplementation Libs.junit
 }

@@ -20,17 +20,12 @@ android {
 }
 
 dependencies {
+  implementation project(':base')
+
   implementation Libs.rxjava
   implementation Libs.rxandroid
   implementation Libs.rxkotlin
   implementation Libs.rxbinding
 
-  implementation Libs.kotlin
-  implementation Libs.appcompat
-  implementation Libs.constraintlayout
-
   implementation Libs.mosby_mvp
-
-  implementation Libs.coroutine
-  implementation Libs.ui_coroutine
 }

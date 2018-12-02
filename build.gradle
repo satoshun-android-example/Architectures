@@ -2,7 +2,6 @@ buildscript {
   repositories {
     google()
     jcenter()
-    maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
     maven { url 'https://jitpack.io' }
     flatDir {
       dirs 'libs'
@@ -18,7 +17,6 @@ allprojects {
   repositories {
     google()
     jcenter()
-    maven { url "http://dl.bintray.com/kotlin/kotlin-eap" }
     maven { url 'https://jitpack.io' }
   }
 }
