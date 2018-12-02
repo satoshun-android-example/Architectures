@@ -8,7 +8,7 @@ object Vers {
 }
 
 object Libs {
-  const val android_plugin = "com.android.tools.build:gradle:3.3.0-rc01"
+  const val android_plugin = "com.android.tools.build:gradle:3.4.0-alpha06"
   const val kotlin_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Vers.kotlin}"
   const val versions_plugin = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
@@ -18,7 +18,10 @@ object Libs {
 
   const val ktx = "androidx.core:core-ktx:1.0.0"
 
-  const val appcompat = "androidx.appcompat:appcompat:1.0.0"
+  const val activity_ktx = "androidx.activity:activity-ktx:1.0.0-alpha01"
+  const val fragment_ktx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
+
+  const val appcompat = "androidx.appcompat:appcompat:1.0.2"
   const val recyclerview = "androidx.recyclerview:recyclerview:1.0.0"
   const val constraintlayout = "androidx.constraintlayout:constraintlayout:2.0.0-alpha2"
   const val cardview = "androidx.cardview:cardview:1.0.0"
@@ -59,6 +62,10 @@ object Libs {
 
   const val mosby_mvp = "com.hannesdorfmann.mosby3:viewstate:3.1.0"
   const val mosby_mvi = "com.hannesdorfmann.mosby3:mvi:3.1.0"
+
+  private const val helium_ver = "0.2.1"
+  const val helium_core = "com.joaquimverges.helium:helium-core:$helium_ver"
+  const val helium_ui = "com.joaquimverges.helium:helium-ui:$helium_ver"
 
   const val dagger = "com.google.dagger:dagger:2.18"
   const val dagger_compiler = "com.google.dagger:dagger-compiler:2.18"

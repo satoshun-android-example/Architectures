@@ -23,3 +23,7 @@
 
 [Mosby](https://github.com/sockeqwe/mosby)
 - todo
+
+## memo
+
+- add dependency main libs
