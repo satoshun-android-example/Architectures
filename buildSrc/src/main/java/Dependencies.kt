@@ -67,6 +67,8 @@ object Libs {
   const val helium_core = "com.joaquimverges.helium:helium-core:$helium_ver"
   const val helium_ui = "com.joaquimverges.helium:helium-ui:$helium_ver"
 
+  const val workflow = "todo"
+
   const val dagger = "com.google.dagger:dagger:2.18"
   const val dagger_compiler = "com.google.dagger:dagger-compiler:2.18"
 

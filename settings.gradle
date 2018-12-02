@@ -6,5 +6,6 @@ include ':rib'
 include ':mvicore'
 include ':mosby'
 include ':helium'
+include ':workflow'
 
 include ':base'
