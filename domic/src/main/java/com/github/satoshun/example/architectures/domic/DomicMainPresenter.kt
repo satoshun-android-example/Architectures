@@ -5,7 +5,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.plusAssign
 
 class DomicMainPresenter(
-  private val view: DomicContract.View,
+  private val view: DomicMainContract.View,
   private val disposables: CompositeDisposable = CompositeDisposable()
 ) : Disposable by disposables {
   init {

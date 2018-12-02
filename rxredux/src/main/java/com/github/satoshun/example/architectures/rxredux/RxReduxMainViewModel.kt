@@ -4,12 +4,12 @@ import androidx.lifecycle.MutableLiveData
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.subjects.PublishSubject
 
-class RxReduxViewModel(
+class RxReduxMainViewModel(
   stateMachine: PaginationStateMachine = PaginationStateMachine()
 ) {
   private val disposables = CompositeDisposable()
 
-  private val input = PublishSubject.create<RxReduxAction>()!!
+  private val input = PublishSubject.create<RxReduxAction>()
   val state: MutableLiveData<PaginationStateMachine.State> = MutableLiveData()
 
   init {

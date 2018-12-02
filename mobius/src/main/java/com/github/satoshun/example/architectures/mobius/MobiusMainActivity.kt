@@ -18,8 +18,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
-class MobiusActivity : AppCompatActivity(),
-    CoroutineScope {
+class MobiusMainActivity : AppCompatActivity(),
+  CoroutineScope {
 
   private val job = Job()
   override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
@@ -32,11 +32,11 @@ class MobiusActivity : AppCompatActivity(),
     setContentView(R.layout.main_act)
 
     controller = Mobius.controller(
-        createLoop(eventSource, createEffectHandler(this)),
-        MobiusMainModel(
-            name = null
-        ),
-        MainThreadWorkRunner.create()
+      createLoop(eventSource, createEffectHandler(this)),
+      MobiusMainModel(
+        name = null
+      ),
+      MainThreadWorkRunner.create()
     )
   }
 
@@ -44,8 +44,8 @@ class MobiusActivity : AppCompatActivity(),
     context: Context
   ): ObservableTransformer<MobiusMainEffect, MobiusMainEvent> {
     return RxMobius
-        .subtypeEffectHandler<MobiusMainEffect, MobiusMainEvent>()
-        .build()
+      .subtypeEffectHandler<MobiusMainEffect, MobiusMainEvent>()
+      .build()
   }
 
   private fun createLoop(
@@ -53,9 +53,9 @@ class MobiusActivity : AppCompatActivity(),
     effectHandler: ObservableTransformer<MobiusMainEffect, MobiusMainEvent>
   ): MobiusLoop.Factory<MobiusMainModel, MobiusMainEvent, MobiusMainEffect> {
     return RxMobius
-        .loop(Update(::update), effectHandler)
-        .init(::init)
-        .eventSource(eventSource)
+      .loop(Update(::update), effectHandler)
+      .init(::init)
+      .eventSource(eventSource)
   }
 
   override fun onDestroy() {

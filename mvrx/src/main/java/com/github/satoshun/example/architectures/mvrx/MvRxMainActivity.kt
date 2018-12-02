@@ -7,8 +7,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlin.coroutines.CoroutineContext
 
-class MvRxActivity : BaseMvRxActivity(),
-    CoroutineScope {
+class MvRxMainActivity : BaseMvRxActivity(),
+  CoroutineScope {
 
   private val job = Job()
   override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
@@ -21,9 +21,9 @@ class MvRxActivity : BaseMvRxActivity(),
       val manager = supportFragmentManager
       val fragment = MvRxMainFragment()
       manager
-          .beginTransaction()
-          .add(fragment, "temp")
-          .commitNow()
+        .beginTransaction()
+        .add(fragment, "temp")
+        .commitNow()
     }
   }
 

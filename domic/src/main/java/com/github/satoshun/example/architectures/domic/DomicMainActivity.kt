@@ -7,7 +7,7 @@ import com.lyft.domic.android.rendering.AndroidRenderer
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.rxkotlin.plusAssign
 
-class DomicActivity : AppCompatActivity() {
+class DomicMainActivity : AppCompatActivity() {
 
   private val renderer = AndroidRenderer()
   private val disposables = CompositeDisposable()

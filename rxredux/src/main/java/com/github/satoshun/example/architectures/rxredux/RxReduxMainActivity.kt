@@ -13,29 +13,29 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 
-class RxReduxActivity : AppCompatActivity(),
-    CoroutineScope {
+class RxReduxMainActivity : AppCompatActivity(),
+  CoroutineScope {
 
   private val job = Job()
   override val coroutineContext: CoroutineContext get() = job + Dispatchers.Main
 
-  private lateinit var viewModel: RxReduxViewModel
+  private lateinit var viewModel: RxReduxMainViewModel
 
   @SuppressLint("SetTextI18n")
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.main_act)
 
-    viewModel = RxReduxViewModel()
+    viewModel = RxReduxMainViewModel()
 
     viewModel.state.observe(this, Observer {
       // render
       when (
         val state = it) {
-        PaginationStateMachine.State.LoadingFirstPageState -> root.addView(TextView(this@RxReduxActivity).apply {
+        PaginationStateMachine.State.LoadingFirstPageState -> root.addView(TextView(this@RxReduxMainActivity).apply {
           text = "first"
         })
-        is PaginationStateMachine.State.ShowContentAndLoadNextPageState -> root.addView(TextView(this@RxReduxActivity).apply {
+        is PaginationStateMachine.State.ShowContentAndLoadNextPageState -> root.addView(TextView(this@RxReduxMainActivity).apply {
           text = state.text
         })
       }

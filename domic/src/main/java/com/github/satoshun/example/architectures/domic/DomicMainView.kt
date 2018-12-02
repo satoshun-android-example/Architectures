@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit
 class DomicMainView(
   private val root: ViewGroup,
   private val renderer: Renderer
-) : DomicContract.View {
+) : DomicMainContract.View {
   private val submit = root.findViewById<android.widget.Button>(R.id.submit)
 
   override val submitButton: Button = AndroidButton(
