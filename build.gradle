@@ -10,6 +10,7 @@ buildscript {
   dependencies {
     classpath Libs.android_plugin
     classpath Libs.kotlin_plugin
+    classpath Libs.versions_plugin
   }
 }
 
@@ -19,6 +20,16 @@ allprojects {
     jcenter()
     maven { url 'https://jitpack.io' }
   }
+}
+
+subprojects {
+  repositories {
+    mavenCentral()
+    jcenter()
+    google()
+  }
+
+  apply plugin: "com.github.ben-manes.versions"
 }
 
 task clean(type: Delete) {

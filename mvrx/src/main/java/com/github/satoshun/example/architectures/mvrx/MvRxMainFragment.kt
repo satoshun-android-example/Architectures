@@ -14,12 +14,12 @@ import com.airbnb.mvrx.BaseMvRxFragment
 class MvRxMainFragment : BaseMvRxFragment() {
   private val viewModel: MvRxMainViewModel by lazy {
     ViewModelProviders.of(
-        this,
-        object : ViewModelProvider.Factory {
-          override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return MvRxMainViewModel() as T
-          }
+      this,
+      object : ViewModelProvider.Factory {
+        override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+          return MvRxMainViewModel() as T
         }
+      }
     ).get<MvRxMainViewModel>()
   }
 
@@ -28,7 +28,7 @@ class MvRxMainFragment : BaseMvRxFragment() {
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View? {
-    return inflater.inflate(R.layout.main_frag, container, false)
+    return inflater.inflate(R.layout.mv_rx_main_frag, container, false)
   }
 
   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

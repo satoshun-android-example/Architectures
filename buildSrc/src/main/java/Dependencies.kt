@@ -1,10 +1,10 @@
 object Vers {
   const val compile_sdk = 28
-  const val min_sdk = 26
+  const val min_sdk = 25
   const val target_sdk = 28
 
   const val kotlin = "1.3.10"
-  const val coroutine = "1.0.0"
+  const val coroutine = "1.0.1"
 }
 
 object Libs {
@@ -16,7 +16,7 @@ object Libs {
   const val coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Vers.coroutine}"
   const val ui_coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Vers.coroutine}"
 
-  const val ktx = "androidx.core:core-ktx:1.0.0"
+  const val ktx = "androidx.core:core-ktx:1.0.1"
 
   const val activityx = "androidx.activity:activity-ktx:1.0.0-alpha01"
   const val fragmentx = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
@@ -49,7 +49,7 @@ object Libs {
 
   const val rxredux = "com.freeletics.rxredux:rxredux:1.0.1"
 
-  const val mvrx = "com.airbnb.android:mvrx:0.5.0"
+  const val mvrx = "com.airbnb.android:mvrx:0.6.0"
 
   const val mobius = "com.spotify.mobius:mobius-core:1.2.0"
   const val mobius_rx2 = "com.spotify.mobius:mobius-rx2:1.2.0"

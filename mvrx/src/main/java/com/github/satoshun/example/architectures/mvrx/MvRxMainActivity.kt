@@ -1,6 +1,7 @@
 package com.github.satoshun.example.architectures.mvrx
 
 import android.os.Bundle
+import androidx.fragment.app.commitNow
 import com.airbnb.mvrx.BaseMvRxActivity
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -15,15 +16,13 @@ class MvRxMainActivity : BaseMvRxActivity(),
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.main_act)
+    setContentView(R.layout.mv_rx_main_act)
 
     if (savedInstanceState == null) {
-      val manager = supportFragmentManager
-      val fragment = MvRxMainFragment()
-      manager
-        .beginTransaction()
-        .add(fragment, "temp")
-        .commitNow()
+      supportFragmentManager
+        .commitNow {
+          add(MvRxMainFragment(), "temp")
+        }
     }
   }
 
