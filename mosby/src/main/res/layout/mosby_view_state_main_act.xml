@@ -18,13 +18,12 @@
     app:layout_constraintTop_toTopOf="parent"
     tools:ignore="HardcodedText" />
 
-  <Button
-    android:id="@+id/state"
+  <TextView
+    android:id="@+id/condition"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    android:text="ViewState"
+    android:layout_marginTop="16dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@id/submit"
-    tools:ignore="HardcodedText" />
+    app:layout_constraintTop_toBottomOf="@id/submit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
