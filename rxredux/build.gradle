@@ -25,6 +25,7 @@ dependencies {
   implementation Libs.rxredux
 
   implementation Libs.rxjava
+  implementation Libs.rxandroid
 
   testImplementation Libs.junit
 }

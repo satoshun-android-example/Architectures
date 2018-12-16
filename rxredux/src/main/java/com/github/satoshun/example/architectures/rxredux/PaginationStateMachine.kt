@@ -17,30 +17,30 @@ class PaginationStateMachine {
 
   private val random = Random(100)
 
-  val input = PublishSubject.create<RxReduxAction>()!!
+  val input = PublishSubject.create<RxReduxAction>()
 
   val state: Observable<State> = input
-      .reduxStore(
-          initialState = State.LoadingFirstPageState,
-          sideEffects = listOf(::loadFirstPageSideEffect),
-          reducer = ::reducer
-      )
-      .distinctUntilChanged()
+    .reduxStore(
+      initialState = State.LoadingFirstPageState,
+      sideEffects = listOf(::loadFirstPageSideEffect),
+      reducer = ::reducer
+    )
+    .distinctUntilChanged()
 
   // like a api call and others
   private fun loadFirstPageSideEffect(
     actions: Observable<RxReduxAction>,
     state: StateAccessor<State>
   ): Observable<RxReduxAction> = actions
-      .ofType(RxReduxAction.LoadNextPageAction::class.java)
-      .delay(2000, TimeUnit.MILLISECONDS)
-      .map {
-        if (random.nextBoolean()) {
-          RxReduxAction.LoadNextPageSuccessAction("${random.nextUInt()}sansan")
-        } else {
-          RxReduxAction.LoadNextPageErrorAction("Error")
-        }
+    .ofType(RxReduxAction.LoadNextPageAction::class.java)
+    .delay(2000, TimeUnit.MILLISECONDS)
+    .map {
+      if (random.nextBoolean()) {
+        RxReduxAction.LoadNextPageSuccessAction("${random.nextUInt()}sansan")
+      } else {
+        RxReduxAction.LoadNextPageErrorAction("Error")
       }
+    }
 
   private fun reducer(state: State, action: RxReduxAction): State {
     return when (action) {
