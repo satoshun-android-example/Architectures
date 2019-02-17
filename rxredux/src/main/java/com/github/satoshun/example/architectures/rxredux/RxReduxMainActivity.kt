@@ -15,10 +15,9 @@ class RxReduxMainActivity : AppCompatActivity() {
 
     viewModel = RxReduxMainViewModel()
 
-    viewModel.state.observe(this, Observer {
+    viewModel.state.observe(this, Observer { state ->
       // render
-      when (
-        val state = it) {
+      when (state) {
         PaginationStateMachine.State.LoadingFirstPageState -> root.addView(TextView(this@RxReduxMainActivity).apply {
           setText(R.string.first)
         })

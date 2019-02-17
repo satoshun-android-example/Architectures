@@ -1,13 +1,15 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
   defaultConfig {
     applicationId "com.github.satoshun.example.architectures.mvrx"
-    minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
     versionCode 1
     versionName "1.0"
   }
@@ -22,7 +24,7 @@ android {
 dependencies {
   implementation project(':base')
 
-  implementation Libs.mvrx
+  implementation MVRX
 
-  testImplementation Libs.junit
+  testImplementation JUNIT
 }

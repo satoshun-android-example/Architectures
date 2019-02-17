@@ -1,13 +1,15 @@
+import static dependencies.DependenciesKt.*
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-  compileSdkVersion Vers.compile_sdk
+  compileSdkVersion COMPILE_SDK
   defaultConfig {
     applicationId "com.github.satoshun.example.architectures.domic"
-    minSdkVersion Vers.min_sdk
-    targetSdkVersion Vers.target_sdk
+    minSdkVersion MIN_SDK
+    targetSdkVersion TARGET_SDK
     versionCode 1
     versionName "1.0"
   }
@@ -24,10 +26,10 @@ dependencies {
 
   implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs')
 
-  implementation Libs.rxjava
-  implementation Libs.rxandroid
-  implementation Libs.rxkotlin
-  implementation Libs.rxbinding
+  implementation RXJAVA
+  implementation RXANDROID
+  implementation RXKOTLIN
+  implementation RXBINDING
 
-  testImplementation Libs.junit
+  testImplementation JUNIT
 }
