@@ -11,19 +11,15 @@ data class MainState(
   val name: String?
 ) : MvRxState
 
-class MvRxMainViewModel : BaseMvRxViewModel<MainState>(
-    initialState = MainState(
-        name = null
-    )
-) {
+class MvRxMainViewModel : BaseMvRxViewModel<MainState>(initialState = MainState(name = null), debugMode = true) {
   private val random = Random(10)
 
   init {
     Observable.interval(5, TimeUnit.SECONDS)
-        .map { random.nextUInt() }
-        .execute {
-          copy(name = it().toString())
-        }
-        .disposeOnClear()
+      .map { random.nextUInt() }
+      .execute {
+        copy(name = it().toString())
+      }
+      .disposeOnClear()
   }
 }

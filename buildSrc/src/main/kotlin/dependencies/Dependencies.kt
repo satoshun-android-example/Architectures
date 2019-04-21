@@ -4,21 +4,21 @@ const val COMPILE_SDK = 28
 const val MIN_SDK = 25
 const val TARGET_SDK = 28
 
-private const val VKOTLIN = "1.3.21"
+private const val VKOTLIN = "1.3.30"
 
-const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0-beta04"
+const val ANDROID_PLUGIN = "com.android.tools.build:gradle:3.4.0"
 const val KOTLIN_PLUGIN = "org.jetbrains.kotlin:kotlin-gradle-plugin:$VKOTLIN"
 const val VERSIONS_PLUGIN = "com.github.ben-manes:gradle-versions-plugin:0.20.0"
 
-private const val VCOROUTINE = "1.0.1"
+private const val VCOROUTINE = "1.2.0"
 const val KOTLIN = "org.jetbrains.kotlin:kotlin-stdlib:$VKOTLIN"
 const val COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$VCOROUTINE"
 const val UI_COROUTINE = "org.jetbrains.kotlinx:kotlinx-coroutines-android:$VCOROUTINE"
 
 const val KTX = "androidx.core:core-ktx:1.0.1"
 
-const val ACTIVITYX = "androidx.activity:activity-ktx:1.0.0-alpha01"
-const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.1.0-alpha01"
+const val ACTIVITYX = "androidx.activity:activity-ktx:1.0.0-alpha06"
+const val FRAGMENTX = "androidx.fragment:fragment-ktx:1.1.0-alpha06"
 
 const val APPCOMPAT = "androidx.appcompat:appcompat:1.0.2"
 const val RECYCLERVIEW = "androidx.recyclerview:recyclerview:1.0.0"
@@ -48,7 +48,7 @@ const val RXBINDING = "com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1"
 
 const val RXREDUX = "com.freeletics.rxredux:rxredux:1.0.1"
 
-const val MVRX = "com.airbnb.android:mvrx:0.6.0"
+const val MVRX = "com.airbnb.android:mvrx:1.0.0"
 
 const val MOBIUS = "com.spotify.mobius:mobius-core:1.2.0"
 const val MOBIUS_RX2 = "com.spotify.mobius:mobius-rx2:1.2.0"
@@ -68,8 +68,9 @@ const val HELIUM_UI = "com.joaquimverges.helium:helium-ui:$VHELIUM"
 
 const val WORKFLOW_CORE = "com.squareup.workflow:workflow-core:0.1.0"
 
-const val DAGGER = "com.google.dagger:dagger:2.21"
-const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:2.21"
+private const val VDAGGER = "2.22.1"
+const val DAGGER = "com.google.dagger:dagger:$VDAGGER"
+const val DAGGER_COMPILER = "com.google.dagger:dagger-compiler:$VDAGGER"
 
 const val JUNIT = "junit:junit:4.12"
 const val TRUTH = "com.google.truth:truth:0.39"
