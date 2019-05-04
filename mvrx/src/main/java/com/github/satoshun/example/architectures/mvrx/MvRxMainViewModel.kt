@@ -8,10 +8,13 @@ import kotlin.random.Random
 import kotlin.random.nextUInt
 
 data class MainState(
-  val name: String?
+  val name: String? = null
 ) : MvRxState
 
-class MvRxMainViewModel : BaseMvRxViewModel<MainState>(initialState = MainState(name = null), debugMode = true) {
+class MvRxMainViewModel(state: MainState) : BaseMvRxViewModel<MainState>(
+  initialState = state,
+  debugMode = BuildConfig.DEBUG
+) {
   private val random = Random(10)
 
   init {
